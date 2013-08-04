@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body data-status="">
+
+<div id="result"></div>
+
+  <script type="text/javascript">
+    setTimeout(function() {
+      var resourceName = document.URL.split('/').splice(-1)[0].split('.')[0];
+
+      var result = document.getElementById('result');
+      result.innerHTML = resourceName;
+
+      var title = document.getElementsByTagName('title')[0];
+      title.innerHTML = resourceName;
+
+      var body = document.getElementsByTagName('body')[0];
+      body.setAttribute('data-status', 'ready');
+    }, 250);
+  </script>
+</body>
+</html>
