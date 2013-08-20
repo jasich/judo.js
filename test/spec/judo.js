@@ -233,6 +233,18 @@ describe('Judo', function () {
         });
       });
     });
+
+    it('should optionally take a callback', function() {
+      var config = {
+        baseUrl: _baseUrl,
+        siteMapPath: _siteMapPath,
+        urls: [ ]
+      };
+
+      // Not a good test, hard to test optional callbacks...
+      judo.updateSiteMap(config);
+      judo.updateSiteMap(config, null);
+    });
   });
 
   describe('#createSnapshots', function(){
@@ -241,7 +253,7 @@ describe('Judo', function () {
     var judo, server;
 
     beforeEach(function() {
-      judo = new Judo({muteWarnings: false});
+      judo = new Judo({muteWarnings: false, phantomProcs: 2});
       server = new TestServer();
       server.start();
     });
@@ -326,6 +338,18 @@ describe('Judo', function () {
 
         return done();
       });
+    });
+
+    it('should optionally take a callback', function() {
+      var config = {
+        baseUrl: _baseUrl,
+        siteMapPath: _siteMapPath,
+        urls: [ ]
+      };
+
+      // Not a good test, hard to test optional callbacks...
+      judo.createSnapshots(config);
+      judo.createSnapshots(config, null);
     });
   });
 });
