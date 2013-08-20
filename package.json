@@ -2,7 +2,7 @@
   "author": "jasich",
   "name": "judo",
   "description": "A node.js module to create sitemaps & static HTML snapshots for SEO of Single Page Applications",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "engines" : { "node" : ">=0.10.3" },
   "main": "./lib/judo.js",
   "repository" : {
