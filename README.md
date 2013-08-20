@@ -82,7 +82,7 @@ Judo uses the URL configuration data that you provide to do it's work. For each 
 
 ***
 
-v0.2.0
+v0.2.0 
 
 Copyright 2013 Jason Sich
 
